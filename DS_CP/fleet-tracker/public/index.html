@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Logistics Fleet Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Real-Time Logistics Fleet Tracker</h1>
+      <p>R-Tree + Segment Tree + Heap + DBSCAN</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>System Stats</h2>
+        <div class="grid two-col">
+          <div>
+            <div class="label">Events/sec</div>
+            <div id="eps" class="value">0</div>
+          </div>
+          <div>
+            <div class="label">Live Vehicles</div>
+            <div id="liveVehicles" class="value">0</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Top 10 Fastest Vehicles (Heap)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>Speed (km/h)</th>
+            </tr>
+          </thead>
+          <tbody id="topSpeedBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Top 10 Distance Vehicles (Heap)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Vehicle</th>
+              <th>Distance (km)</th>
+            </tr>
+          </thead>
+          <tbody id="topDistanceBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Live Clusters (DBSCAN)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Cluster</th>
+              <th>Size</th>
+              <th>Centroid</th>
+            </tr>
+          </thead>
+          <tbody id="clusterBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>API Playground</h2>
+        <div class="controls">
+          <button id="btnNearby">Query Nearby Vehicles</button>
+          <button id="btnHistory">Query Vehicle History</button>
+        </div>
+        <pre id="apiOutput"></pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

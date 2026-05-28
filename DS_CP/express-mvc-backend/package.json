@@ -1,0 +1,23 @@
+{
+  "name": "express-mvc-backend",
+  "version": "1.0.0",
+  "description": "Express.js MVC backend with WebSocket support",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "perf:test": "node scripts/perf/runPerformanceTest.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-mvc-backend": "file:",
+    "rbush": "^3.0.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

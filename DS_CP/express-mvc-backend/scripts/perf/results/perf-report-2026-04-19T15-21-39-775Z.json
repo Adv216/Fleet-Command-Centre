@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-04-19T15:21:39.774Z",
+  "scenarios": [
+    {
+      "scenario": {
+        "vehicleCount": 1000,
+        "concurrency": 120,
+        "queryIterations": 10,
+        "baseUrl": "http://localhost:4001/api"
+      },
+      "ingestMetrics": {
+        "count": 1000,
+        "minMs": 3,
+        "maxMs": 106,
+        "avgMs": 31.26,
+        "p50Ms": 25,
+        "p95Ms": 90,
+        "p99Ms": 103
+      },
+      "queryMetrics": [
+        {
+          "endpoint": "vehicles_live",
+          "url": "http://localhost:4001/api/vehicles/live?limit=200",
+          "count": 10,
+          "minMs": 0,
+          "maxMs": 3,
+          "avgMs": 0.7,
+          "p50Ms": 1,
+          "p95Ms": 3,
+          "p99Ms": 3
+        },
+        {
+          "endpoint": "vehicles_nearby",
+          "url": "http://localhost:4001/api/vehicles/nearby?lat=12.9716&lon=77.5946&radiusKm=3&limit=200",
+          "count": 10,
+          "minMs": 1,
+          "maxMs": 2,
+          "avgMs": 1.2,
+          "p50Ms": 1,
+          "p95Ms": 2,
+          "p99Ms": 2
+        },
+        {
+          "endpoint": "vehicles_top",
+          "url": "http://localhost:4001/api/vehicles/top?k=10",
+          "count": 10,
+          "minMs": 0,
+          "maxMs": 1,
+          "avgMs": 0.2,
+          "p50Ms": 0,
+          "p95Ms": 1,
+          "p99Ms": 1
+        },
+        {
+          "endpoint": "vehicles_clusters",
+          "url": "http://localhost:4001/api/vehicles/clusters?epsKm=0.3&minPts=3",
+          "count": 10,
+          "minMs": 0,
+          "maxMs": 8,
+          "avgMs": 1.2,
+          "p50Ms": 1,
+          "p95Ms": 8,
+          "p99Ms": 8
+        },
+        {
+          "endpoint": "vehicles_history",
+          "url": "http://localhost:4001/api/vehicles/history/PV1000_1776612098733_1?startTs=1776608500214&endTs=1776612100214",
+          "count": 10,
+          "minMs": 0,
+          "maxMs": 1,
+          "avgMs": 0.2,
+          "p50Ms": 0,
+          "p95Ms": 1,
+          "p99Ms": 1
+        }
+      ],
+      "memory": {
+        "backend": {
+          "rssMb": 187.2,
+          "heapUsedMb": 12.47,
+          "heapTotalMb": 28.97,
+          "externalMb": 127.46
+        },
+        "backendUptimeSec": 104.35,
+        "loadGenerator": {
+          "rssMb": 99.19,
+          "heapUsedMb": 40.3,
+          "heapTotalMb": 60.87,
+          "externalMb": 5.9
+        }
+      },
+      "durationSec": 0.52,
+      "at": "2026-04-19T15:21:39.256Z"
+    }
+  ]
+}

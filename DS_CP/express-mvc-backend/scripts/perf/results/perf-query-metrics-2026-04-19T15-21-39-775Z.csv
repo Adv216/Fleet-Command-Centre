@@ -1,0 +1,6 @@
+scenarioVehicles,endpoint,count,avgMs,p95Ms,p99Ms,maxMs
+1000,vehicles_live,10,0.7,3,3,3
+1000,vehicles_nearby,10,1.2,2,2,2
+1000,vehicles_top,10,0.2,1,1,1
+1000,vehicles_clusters,10,1.2,8,8,8
+1000,vehicles_history,10,0.2,1,1,1
